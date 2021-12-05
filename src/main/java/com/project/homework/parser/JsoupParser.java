@@ -113,7 +113,8 @@ public class JsoupParser {
 
             String abs = element.attr("abs:" + attribute); /* URL to fetch resource from */
             String src = Utils.replaceScheme(element.attr(attribute), "");
-            String assetPath = this.path + Utils.replaceInvalidFileChars(src, "_"); /* Builds the name of file */
+            String inHtmlPath = Utils.replaceInvalidFileChars(src, "_");
+            String assetPath = this.path + inHtmlPath;
 
             // If base64 Image :: Already accessible offline
             if ("".equals(abs)) {
@@ -122,7 +123,7 @@ public class JsoupParser {
 
             // Update element attribute if success
             if (IOHandler.downloadResourceFromURL(abs, assetPath)) {
-                element.attr(attribute, assetPath);
+                element.attr(attribute, inHtmlPath);
                 success++;
 
                 if ("src".equals(attribute)) {
