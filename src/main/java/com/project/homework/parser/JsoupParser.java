@@ -84,12 +84,12 @@ public class JsoupParser {
         printer.printOnlyIf(this.optionMetadata, "Imports: %d", imports.size());
 
         // Archive Elements
-        if (this.options.containsKey(Option.ASSETS)) {
+        if (this.options.containsKey(Option.ASSETS) && this.metadata.getAssets() != 0) {
             int success = archiveElements(assets, "src");
             printer.print(Messages.SUCCESS_ASSETS, success, this.metadata.getAssets());
         }
 
-        if (this.options.containsKey(Option.IMPORTS)) {
+        if (this.options.containsKey(Option.IMPORTS) && this.metadata.getImports() != 0) {
             int success = archiveElements(imports, "href");
             printer.print(Messages.SUCCESS_IMPORTS, success, this.metadata.getImports());
         }
