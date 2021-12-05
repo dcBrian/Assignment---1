@@ -98,10 +98,10 @@ public class IOHandler {
             return true;
 
         } catch (MalformedURLException e1) {
-            printer.printPretty(Messages.RESOURCE_URL_NOT_VALID, e1.toString());
+            printer.printPretty(Messages.RESOURCE_URL_NOT_VALID, url, e1.toString());
 
         } catch (IOException e2) {
-            printer.printPretty(Messages.RESOURCE_IO, e2.toString());
+            printer.printPretty(Messages.RESOURCE_IO, url, e2.toString());
         }
 
         return false;

@@ -22,7 +22,7 @@ public class Messages {
     public static final String FLOW_URL_NOT_VALID = "Error - Argument %s is not a valid URL: \n%s";
     public static final String FLOW_STATUS_NOT_VALID = "Error - HTTP request for the URL:%s resulted in a not OK response: \n%s";
 
-    public static final String RESOURCE_URL_NOT_VALID = "Error: Resource's URL is not valid: \n%s";
-    public static final String RESOURCE_IO = "Error: Can't download Resource: \n%s";
+    public static final String RESOURCE_URL_NOT_VALID = "Error: Resource's URL is not valid: %s \n%s";
+    public static final String RESOURCE_IO = "Error: Can't download Resource: %s \n%s";
     public static final String BASE_64_IO = "Error: Can't save base64 image: \n%s";
 }
