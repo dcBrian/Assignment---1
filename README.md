@@ -25,10 +25,10 @@ The base program was generated via Spring Initializr.
 - [x] Load Page locally
   - [x] Archive Assets (HTML tags with src attribute)
   - [x] Archive Imports (Link tags) :: Actually results in Origin null CORS issue
-    - Start Browser with following option : --allow-file-access-from-files
-    - Set up Server
+        - Start Browser with following option : --allow-file-access-from-files
+        - Set up Server
 
-## Project Structure
+## Resources Folder Structure
 
     ├── pages                        # Root Resources folder
     │   ├── url1                     # Url1 Resources folder
@@ -51,9 +51,9 @@ The base program was generated via Spring Initializr.
    ```
    docker build -t homework .
    ```
-2. Run container
+2. Run container - example 
    ```
-   docker run --name homework_container homework (--metadata) "url1" "url2"
+   docker run --name homework_container homework --all url1 url2
    ```
 3. Download files from container
    ```
