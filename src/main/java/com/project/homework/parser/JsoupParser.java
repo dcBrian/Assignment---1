@@ -124,6 +124,10 @@ public class JsoupParser {
             if (IOHandler.downloadResourceFromURL(abs, assetPath)) {
                 element.attr(attribute, assetPath);
                 success++;
+
+                if ("src".equals(attribute)) {
+                    element.removeAttr("srcset");
+                }
             }
         }
         return success;
