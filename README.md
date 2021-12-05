@@ -24,8 +24,8 @@ The base program was generated via Spring Initializr.
 
 - [x] Load Page locally
   - [x] Archive Assets (HTML tags with src attribute)
-  - [x] Archive Imports (Link tags) :: Actually results in Origin null CORS issue
-        - Start Browser with following option : --allow-file-access-from-files
+  - [x] Archive Imports (Link tags) :: Actually results in Origin null CORS issue <br />
+        - Start Browser with following option : --allow-file-access-from-files <br />
         - Set up Server
 
 ## Resources Folder Structure
