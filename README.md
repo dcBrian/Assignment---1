@@ -57,7 +57,7 @@ The base program was generated via Spring Initializr.
    ```
 3. Download files from container
    ```
-   docker cp homework_container:pages "/your/path"
+   docker cp homework_container:pages /your/path
    ```
 
 ## Global Options
