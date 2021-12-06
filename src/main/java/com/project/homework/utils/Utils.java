@@ -104,4 +104,32 @@ public class Utils {
     public static String replaceInvalidFileChars(String fileName, String replacement) {
         return fileName.replaceAll("[^a-zA-Z0-9\\.\\-]", replacement).replaceAll("^_", "");
     }
+
+    /**
+     * Retrieve base64 Image extension from source attribute.
+     * 
+     * @param source
+     * @return String
+     */
+    public static String getBase64Extension(String source) {
+        String[] strings = source.split(",");
+        String extension;
+
+        // Retrieve Base64's extension
+        switch (strings[0]) {
+            case "data:image/jpeg;base64":
+                extension = ".jpeg";
+                break;
+            case "data:image/png;base64":
+                extension = ".png";
+                break;
+            case "data:image/gif;base64":
+                extension = ".gif";
+                break;
+            default:
+                extension = "jpg";
+                break;
+        }
+        return extension;
+    }
 }

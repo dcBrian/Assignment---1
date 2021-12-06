@@ -14,7 +14,7 @@ public class Messages {
 
     public static final String SUCCESS_HTML = "HTML file archived successfully";
     public static final String SUCCESS_METADTA = "Metadata file archived successfully";
-    public static final String SUCCESS_ASSETS = "Assets archived successfully: %d/%d (Base64 images not archived)";
+    public static final String SUCCESS_ASSETS = "Assets archived successfully: %d/%d";
     public static final String SUCCESS_IMPORTS = "Imports archived successfully: %d/%d";
 
     public static final String FLOW_IO = "Error - Could not get any HTTP response: \n%s";

@@ -108,9 +108,6 @@ public class IOHandler {
     }
 
     /**
-     * Method not used
-     * No need to archive Base64 images as they are already included in HTML.
-     *
      * Writes a base64 into the file with the specified name. Errors are
      * handled locally because Images are not mandatory to read the HTML.
      *
@@ -121,27 +118,10 @@ public class IOHandler {
      */
     public static boolean writeBase64Image(String base64, String fileName) {
         String[] strings = base64.split(",");
-        String extension;
-
-        // Retrieve Base64's extension
-        switch (strings[0]) {
-            case "data:image/jpeg;base64":
-                extension = ".jpeg";
-                break;
-            case "data:image/png;base64":
-                extension = ".png";
-                break;
-            case "data:image/gif;base64":
-                extension = ".gif";
-                break;
-            default:
-                extension = "jpg";
-                break;
-        }
 
         try {
             byte[] data = Base64.getDecoder().decode(strings[1].getBytes(StandardCharsets.UTF_8));
-            writeBytesToFile(data, fileName + extension);
+            writeBytesToFile(data, fileName);
             return true;
 
         } catch (IOException e) {
