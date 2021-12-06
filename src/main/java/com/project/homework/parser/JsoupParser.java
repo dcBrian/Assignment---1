@@ -106,6 +106,7 @@ public class JsoupParser {
      * @param attribute
      * @return int
      */
+    // TODO :: Keep track of duplicate Assets
     private int archiveElements(List<Element> elements, String attribute) {
         int success = 0;
 
@@ -118,15 +119,16 @@ public class JsoupParser {
 
             // Asset is a base64 Image :: Already accessible offline => Skip ?
             if ("".equals(abs)) {
-                String baseSrc = element.attr("src");
-                String baseAttrPath = "image" + success + Utils.getBase64Extension(baseSrc);
-                String baseFilePath = this.path + baseAttrPath;
+                // String baseSrc = element.attr("src");
+                // String baseAttrPath = "image" + success + Utils.getBase64Extension(baseSrc);
+                // String baseFilePath = this.path + baseAttrPath;
 
-                if (IOHandler.writeBase64Image(baseSrc, baseFilePath)) {
-                    element.attr(attribute, baseAttrPath);
-                    success++;
-                }
+                // if (IOHandler.writeBase64Image(baseSrc, baseFilePath)) {
+                // element.attr(attribute, baseAttrPath);
+                // success++;
+                // }
 
+                success++;
                 continue;
             }
 
