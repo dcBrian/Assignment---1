@@ -1,4 +1,4 @@
-# Homework
+# Assignement - 1
 
 This is a command line Java program that can fetch web pages and saves them to disk for later retrieval and browsing.<br />
 The base program was generated via Spring Initializr.
