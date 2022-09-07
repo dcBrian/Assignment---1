@@ -1,7 +1,6 @@
-# Assignement - 1
+# Interview-project-01
 
-This is a command line Java program that can fetch web pages and saves them to disk for later retrieval and browsing.<br />
-The base program was generated via Spring Initializr.
+During a startup interview process, I was asked to create a command line Java program that can fetch web pages and saves them to disk for later retrieval and browsing. The project had to include docker.<br />
 
 ### Built With
 
